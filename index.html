@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAM Projecten Filtersysteem</title>
+    <link rel="stylesheet" href="main-styles.css"> <!-- Controleer dit pad -->
+</head>
+<body>
+    <div class="header">
+        <!-- BAM-logo links -->
+        <img src="https://www.macaw.nl/app/uploads/sites/10/BAM-logo-green-web-version-png.png" 
+             alt="BAM Logo" 
+             class="logo" 
+             style="display: block; margin: auto; width: 200px; height: auto;">
+             
+        <div class="navigation">
+            <button class="button" onclick="navigateTo('projecten')">Projecten</button>
+            <button class="button" onclick="navigateTo('diensten')">Diensten</button>
+            <button class="button" onclick="navigateTo('contact')">Contact</button>
+            <button class="button" onclick="navigateTo('over-ons')">Over Ons</button>
+        </div>
+        
+        <!-- Zoekbalk gecentreerd in het midden -->
+        <div class="search-bar">
+            <input type="text" placeholder="Zoek naar lessen geleerd" class="search-input">
+            <button class="search-button" onclick="searchLessons()">Zoeken</button>
+        </div>
+    </div>
+
+    <!-- Filter sectie -->
+    <div class="filters">
+        <h2>Filter Projecten</h2>
+        <select id="projectType">
+            <option value="tender">Tender</option>
+            <option value="project">Project</option>
+        </select>
+
+        <h3>Soort Project</h3>
+        <select id="soortProject">
+            <option value="brug">Brug</option>
+            <option value="viaduct">Viaduct</option>
+            <option value="spoor">Spoor</option>
+            <option value="wegen">Wegen</option>
+            <option value="infrastructuur">Overige Infrastructuur</option>
+        </select>
+
+        <h3>Jaartallen</h3>
+        <select id="jaartallen">
+            <option value="1_jaar">Afgelopen jaar</option>
+            <option value="2_jaar">Afgelopen 2 jaar</option>
+            <option value="5_jaar">Afgelopen 5 jaar</option>
+            <option value="10_jaar">Afgelopen 10 jaar</option>
+            <option value="15_jaar">Afgelopen 15 jaar</option>
+            <option value="20_jaar">Afgelopen 20 jaar</option>
+        </select>
+
+        <h3>Soorten Documenten</h3>
+        <select id="soortenDocumenten">
+            <option value="inkoop">Inkoop</option>
+            <option value="ontwerpplanning">Ontwerpplanning</option>
+            <option value="lessons">Lessons Learned</option>
+            <option value="overig">Overig</option>
+        </select>
+
+        <h3>Afdelingen</h3>
+        <select id="afdelingen">
+            <option value="inkoop">Inkoop</option>
+            <option value="ontwerp">Ontwerp</option>
+            <option value="projectmanagement">Projectmanagement</option>
+            <option value="uitvoering">Uitvoering</option>
+        </select>
+
+        <button class="filter-button" onclick="showResults()">Toon Resultaten</button>
+    </div>
+
+    <!-- Knop om te uploaden boven de kaart -->
+    <div class="upload-section">
+        <h2>Upload Document</h2>
+        <!-- Dit stuurt naar de upload.html-pagina -->
+        <button class="upload-button" onclick="window.location.href='upload.html';">Upload Document</button>
+    </div>
+
+    <!-- Kaart sectie -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501211.3557575624!2d2.6397712971514884!3d52.25084462419799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c3db87e4bb%3A0xb3a175ceffbd0a9f!2sNederland!5e0!3m2!1snl!2sbe!4v1726487289868!5m2!1snl!2sbe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Voeg JavaScript-bestand toe -->
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

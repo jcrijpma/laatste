@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Categoriseren en Koppelen</title>
+   <link rel="stylesheet" href="upload-styles.css"> <!-- Controleer of dit pad juist is -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Document Upload en Categorisatie voor GIS/SharePoint</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            
+            <!-- Documentnaam en projectinfo -->
+            <label for="document-name">Documentnaam:</label>
+            <input type="text" id="document-name" name="document-name" required><br><br>
+
+            <label for="project-name">Projectnaam:</label>
+            <input type="text" id="project-name" name="project-name" required><br><br>
+
+            <label for="project-type">Soort Project:</label>
+            <select id="project-type" name="project-type" required>
+                <option value="infrastructuur">Infrastructuur</option>
+                <option value="residential">Residentieel</option>
+                <option value="commercieel">Commercieel</option>
+            </select><br><br>
+
+            <!-- Fase van het project en kennisinformatie -->
+            <label for="project-phase">Fase van het project:</label>
+            <select id="project-phase" name="project-phase" required>
+                <option value="planning">Planning</option>
+                <option value="uitvoering">Uitvoering</option>
+                <option value="oplevering">Oplevering</option>
+            </select><br><br>
+
+            <label for="knowledge-category">Kennis Categorie:</label>
+            <select id="knowledge-category" name="knowledge-category" required>
+                <option value="risicomanagement">Risicomanagement</option>
+                <option value="stakeholder-communicatie">Stakeholder Communicatie</option>
+                <option value="technische-problemen">Technische Problemen</option>
+            </select><br><br>
+
+            <!-- Geografische locatie (GIS) -->
+            <label for="geolocation">Geografische locatie (GIS-coördinaten):</label>
+            <input type="text" id="geolocation" name="geolocation" placeholder="Voeg de GIS-coördinaten toe" required><br><br>
+
+            <!-- Overige documentinformatie -->
+            <label for="key-lesson">Belangrijkste les:</label>
+            <textarea id="key-lesson" name="key-lesson" required></textarea><br><br>
+
+            <label for="contributing-department">Bijdragende afdeling(en):</label>
+            <input type="text" id="contributing-department" name="contributing-department" required><br><br>
+
+            <label for="date-occurrence">Datum van gebeurtenis:</label>
+            <input type="date" id="date-occurrence" name="date-occurrence" required><br><br>
+
+            <label for="tender-process">Gerelateerde aanbestedingsproces:</label>
+            <input type="text" id="tender-process" name="tender-process" required><br><br>
+
+            <label for="impact-level">Impactniveau:</label>
+            <select id="impact-level" name="impact-level" required>
+                <option value="laag">Laag</option>
+                <option value="medium">Medium</option>
+                <option value="hoog">Hoog</option>
+            </select><br><br>
+
+            <label for="action-taken">Actie ondernomen:</label>
+            <textarea id="action-taken" name="action-taken" required></textarea><br><br>
+
+            <!-- Upload en koppeling aan systemen zoals SharePoint -->
+            <label for="related-documents">Gerelateerde documenten (koppeling met SharePoint):</label>
+            <input type="file" id="related-documents" name="related-documents" accept=".pdf, .doc, .docx, .xls, .xlsx, .txt"><br><br>
+
+            <!-- URL voor koppeling met SharePoint (kan ook GIS-punten visualiseren) -->
+            <label for="sharepoint-url">SharePoint/Document URL:</label>
+            <input type="url" id="sharepoint-url" name="sharepoint-url" placeholder="Voeg de URL van het document toe indien relevant"><br><br>
+
+            <!-- Tags voor zoekbaarheid -->
+            <label for="tags">Tags/Trefwoorden:</label>
+            <input type="text" id="tags" name="tags" placeholder="Voeg trefwoorden toe voor gemakkelijk zoeken" required><br><br>
+
+            <label for="responsible-party">Verantwoordelijke partij:</label>
+            <input type="text" id="responsible-party" name="responsible-party" required><br><br>
+
+            <label for="confidentiality-level">Niveau van vertrouwelijkheid:</label>
+            <select id="confidentiality-level" name="confidentiality-level" required>
+                <option value="openbaar">Openbaar</option>
+                <option value="vertrouwelijk">Vertrouwelijk</option>
+            </select><br><br>
+
+            <!-- Submit knop -->
+            <input type="submit" value="Verzend Document">
+        </form>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
